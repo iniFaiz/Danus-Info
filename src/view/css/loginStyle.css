@@ -1,0 +1,31 @@
+.pageTitle {
+    -fx-font-size: 24px;
+    -fx-text-fill: #333;
+}
+
+.loginButton {
+    -fx-background-color: #5cb85c;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+}
+
+.loginButton:hover {
+    -fx-background-color: #4cae4c;
+}
+
+#registerSellerButton {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #0000ff; /* Warna teks. Anda bisa mengubahnya sesuai kebutuhan */
+}
+
+.root {
+    -fx-background-image: url("../img/brand/backgroundlogin.png");
+    -fx-background-size: cover;
+    -fx-background-position: bottom;
+    -fx-background-repeat: no-repeat;
+}
+
+.textField {
+    -fx-padding: 10px;
+}

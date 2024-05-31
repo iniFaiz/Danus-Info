@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<StackPane stylesheets="@css/loginStyle.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+    <VBox alignment="center" prefHeight="600.0" prefWidth="1080.0" spacing="20">
+        <padding><Insets bottom="40" left="40" right="40" top="40" /></padding>
+      <ImageView fitHeight="101.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/brand/LOGO%20APS%20DANUS%202.png" />
+         </image>
+      </ImageView>
+        <Text styleClass="pageTitle" text="Welcome to Danus-Info" />
+        <VBox spacing="10">
+            <TextField fx:id="usernameField" maxWidth="300.0" promptText="Email ITK" translateX="350.0" />
+            <PasswordField fx:id="passwordField" maxWidth="300.0" promptText="Password" translateX="350.0" />
+        </VBox>
+        <Label fx:id="loginMessageLabel" styleClass="loginMessage" text="" />
+        <HBox prefHeight="38.0" prefWidth="1000.0" spacing="10" translateY="-30.0">
+            <Button onAction="#handleSellerLoginAction" styleClass="loginButton" text="Login as Seller" translateX="533.0" />
+            <Button fx:id="btnLogin" onAction="#handleBuyerLoginAction" styleClass="loginButton" text="Login as Buyer" translateX="224.0" />
+        </HBox>
+        <Button fx:id="registerSellerButton" layoutX="200" layoutY="200" onAction="#handleRegisterSellerButtonAction" style="-fx-font-style: italic; -fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #0000ff; -fx-underline: true;">
+            Registrasi sebagai seller
+        </Button>
+    </VBox>
+</StackPane>

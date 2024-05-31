@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="555.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.seller.MarketplaceController">
+    <children>
+        <StackPane fx:id="dashContent" prefHeight="557.0" prefWidth="930.0">
+            <children>
+                <BorderPane prefHeight="555.0" prefWidth="950.0">
+                    <top>
+                        <GridPane alignment="TOP_CENTER" BorderPane.alignment="CENTER">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <AnchorPane prefHeight="200.0" prefWidth="469.0" GridPane.columnIndex="1">
+                                    <children>
+                                        <Button fx:id="btnTambahDanus" onAction="#handleTambahDanus" layoutX="350.0" layoutY="10.0" mnemonicParsing="false" text="Buat Danus" />
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </GridPane>
+                    </top>
+                    <center>
+                        <TableView fx:id="tableView" prefHeight="527.0" prefWidth="113.0" BorderPane.alignment="CENTER">
+                            <columns>
+                                <TableColumn fx:id="danusanColumn" prefWidth="459.999981701374" text="LIST DANUSAN" />
+                                <TableColumn fx:id="lokasiColumn" prefWidth="288.79998779296875" text="Lokasi" />
+                                <TableColumn fx:id="actionColumn" prefWidth="200.0" /> <!-- Add this line -->
+                            </columns>
+                        </TableView>
+                    </center>
+                </BorderPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>
